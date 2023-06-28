@@ -58,14 +58,24 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d;
     
 
-};
+}
+
+function getSelected() {
+    console.log('hi');
+    const answers = document.querySelectorAll(".answer");
+
+    answers.forEach((answer)=>{
+        console.log(answer.value);
+    });
+}
 
 
 submitbtn.addEventListener("click", ()=>{
-  
-
-
     currentQuiz++;
+    
+  
+   console.log('on');
+   getSelected();
     
         if(currentQuiz<quizData.length){
     
